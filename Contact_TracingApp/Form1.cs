@@ -36,5 +36,30 @@ namespace Contact_TracingApp
         {
 
         }
+
+        private void btnAddAddress_Click(object sender, EventArgs e)
+        {
+            lstBoxOutput.Items.Add(txBoxAddress.Text);
+        }
+
+        private void btnAddAge_Click(object sender, EventArgs e)
+        {
+            lstBoxOutput.Items.Add(txBxAge.Text);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            lstBoxOutput.Items.RemoveAt(0);
+        }
     }
 }

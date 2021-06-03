@@ -29,6 +29,11 @@ namespace Contact_TracingApp
 
         private void btn1_Click(object sender, EventArgs e)
         {
+            lstBoxOutput.Items.Add(txBxName.Text);
+        }
+
+        private void txBxName_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

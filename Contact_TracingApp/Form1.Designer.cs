@@ -44,6 +44,7 @@ namespace Contact_TracingApp
             this.txBxName.Name = "txBxName";
             this.txBxName.Size = new System.Drawing.Size(134, 23);
             this.txBxName.TabIndex = 0;
+            this.txBxName.TextChanged += new System.EventHandler(this.txBxName_TextChanged);
             // 
             // txBoxAddress
             // 
@@ -110,7 +111,7 @@ namespace Contact_TracingApp
             this.Controls.Add(this.txBoxAddress);
             this.Controls.Add(this.txBxName);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Contact Tracer";
             this.ResumeLayout(false);
             this.PerformLayout();
 

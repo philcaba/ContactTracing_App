@@ -60,15 +60,32 @@ namespace Contact_TracingApp
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            lstBoxOutput.Items.RemoveAt(0);
+            try
+            {
+                lstBoxOutput.Items.RemoveAt(0);
+            }
+            catch { }
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             StreamWriter outputFile;
-            outputFile = File.CreateText("Day 1.txt");
-            outputFile.WriteLine(lstBoxOutput.Text);
+
+          
+
+            String createDate = DateTime.Now.ToLongDateString();
+
+            outputFile = File.AppendText(createDate);
+            
+            foreach (var item in lstBoxOutput.Items)
+            {
+                outputFile.WriteLine(item.ToString());
+            }
+            outputFile.WriteLine("=====");
             outputFile.Close();
         }
+
+    
     }
 }

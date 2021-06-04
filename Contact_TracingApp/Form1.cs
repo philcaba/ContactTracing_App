@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,6 +61,14 @@ namespace Contact_TracingApp
         private void btnClear_Click(object sender, EventArgs e)
         {
             lstBoxOutput.Items.RemoveAt(0);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            StreamWriter outputFile;
+            outputFile = File.CreateText("Day 1.txt");
+            outputFile.WriteLine(lstBoxOutput.Text);
+            outputFile.Close();
         }
     }
 }

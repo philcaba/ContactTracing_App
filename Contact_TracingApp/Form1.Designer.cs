@@ -40,6 +40,7 @@ namespace Contact_TracingApp
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txBxName
@@ -106,7 +107,7 @@ namespace Contact_TracingApp
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(355, 390);
+            this.btnClear.Location = new System.Drawing.Point(296, 389);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 7;
@@ -142,11 +143,22 @@ namespace Contact_TracingApp
             this.label3.TabIndex = 10;
             this.label3.Text = "AGE";
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(414, 389);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 11;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 445);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -179,6 +191,7 @@ namespace Contact_TracingApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 
